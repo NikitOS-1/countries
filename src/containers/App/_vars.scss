@@ -11,13 +11,18 @@ $fw-bold: 800;
 /* Other */
 $radii: 0.5rem;
 
-// dark
-$colors-text-dark: hsl(0, 0%, 100%);
-$colors-bg-dark: hsl(207, 26%, 17%);
-$colors-ui-base-dark: hsl(209, 23%, 22%);
-$shadow-dark: rgba(245, 245, 245, 0.2)0 0 8px;
-// light
-$colors-text-light: hsl(200, 15%, 8%);
-$colors-bg-light: hsl(0, 0%, 98%);
-$colors-ui-base-light: hsl(0, 0%, 100%);
-$shadow-light: rgba(149, 157, 165, 0.2)0px 8px 24px;
+// body[data-theme=light] {
+$colors-text: #111517;
+$colors-bg: #fafafa;
+$colors-ui-base: #fff;
+$colors-ui-alt: #858585;
+$shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+// }
+
+// body[data-theme=dark] {
+$colors-text: #fff;
+$colors-bg: #202c37;
+$colors-ui-base: #2b3945;
+$colors-ui-alt: #fff;
+$shadow: hsla(0, 0%, 96.1%, 0.2) 0 0 8px;
+// }

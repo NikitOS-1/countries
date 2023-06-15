@@ -1,0 +1,21 @@
+@import"./vars";
+
+.container {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.light {
+    // background: $colors-ui-base-light;
+    // background-color: $colors-bg-light;
+    // color: $colors-text-light;
+}
+
+.dark {
+    // background: $colors-ui-base-dark;
+    // background-color: $colors-bg-dark;
+    // color: $colors-text-dark;
+}
