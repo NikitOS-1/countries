@@ -13,11 +13,7 @@ function App() {
   };
 
   return (
-    <div
-      className={[
-        style["container"],
-        `${theme ? style["light"] : style["dark"]}`,
-      ].join(" ")}>
+    <div className={[style["container"], style[`${theme}`]].join(" ")}>
       <Header toggleTheme={toggleTheme} />
       <Main />
       <Footer />

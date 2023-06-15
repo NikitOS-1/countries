@@ -1,15 +1,47 @@
 @import'../App/vars';
 
 header {
-    // box-shadow: $shadow-dark;
-    width: 100%;
-    height: 75px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    box-shadow: $shadow-light;
+    width: 100%;
+    height: 75px;
 
-    a {
-        text-decoration: none;
-        color: inherit;
+    .wrap {
+        display: flex;
+        justify-content: space-between;
+        width: $md-display-size;
+        padding: 2rem;
+
+        .modeTheme {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            span {
+                margin-left: 5px;
+            }
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
     }
+
 }
+
+body[class="dark"] {
+    box-shadow: $shadow-dark;
+}
+
+body[class="light"] {
+    box-shadow: $shadow-light;
+}
+
+// @media (max-width: 750) {
+//     .wrap {
+//         width: $md-display-size;
+//     }
+// }

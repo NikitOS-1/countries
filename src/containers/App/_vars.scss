@@ -11,18 +11,21 @@ $fw-bold: 800;
 /* Other */
 $radii: 0.5rem;
 
-// body[data-theme=light] {
-$colors-text: #111517;
-$colors-bg: #fafafa;
-$colors-ui-base: #fff;
-$colors-ui-alt: #858585;
-$shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-// }
+// body[data-theme=light] 
+$colors-text-light: #111517;
+$colors-bg-light: #fafafa;
+$colors-ui-base-light: #fff;
+$colors-ui-alt-light: #858585;
+$shadow-light: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
-// body[data-theme=dark] {
-$colors-text: #fff;
-$colors-bg: #202c37;
-$colors-ui-base: #2b3945;
-$colors-ui-alt: #fff;
-$shadow: hsla(0, 0%, 96.1%, 0.2) 0 0 8px;
-// }
+// body[data-theme=dark] 
+$colors-text-dark: #fff;
+$colors-bg-dark: #202c37;
+$colors-ui-base-dark: #2b3945;
+$colors-ui-alt-dark: #fff;
+$shadow-dark: hsla(0, 0%, 96.1%, 0.2) 0 0 8px;
+
+// ## Layout
+$sm-display-size : 375px;
+$md-display-size : 920px;
+$lr-display-size : 1440px;

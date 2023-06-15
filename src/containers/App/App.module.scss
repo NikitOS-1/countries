@@ -9,13 +9,13 @@
 }
 
 .light {
-    // background: $colors-ui-base-light;
-    // background-color: $colors-bg-light;
-    // color: $colors-text-light;
+    background: $colors-bg-light;
+    background-color: $colors-ui-base-light;
+    color: $colors-text-light;
 }
 
 .dark {
-    // background: $colors-ui-base-dark;
-    // background-color: $colors-bg-dark;
-    // color: $colors-text-dark;
+    background: $colors-bg-dark;
+    background-color: $colors-ui-base-dark;
+    color: $colors-text-dark;
 }
