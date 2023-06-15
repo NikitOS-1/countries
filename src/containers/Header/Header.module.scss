@@ -1,8 +1,7 @@
 @import'../App/vars';
 
 header {
-    box-shadow: black;
+    box-shadow: $shadow-dark;
     width: 90%;
     height: 10%;
-    background-color: $col-tomat;
 }
