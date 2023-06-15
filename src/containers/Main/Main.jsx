@@ -1,4 +1,4 @@
 const Main = () => {
-  return <div>Main</div>;
+  return <main>Main</main>;
 };
 export default Main;
