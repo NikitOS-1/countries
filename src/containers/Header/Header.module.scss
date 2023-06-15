@@ -1,6 +1,8 @@
+@import url('../../index.scss');
+
 header {
     box-shadow: black;
     width: 90%;
     height: 10%;
-    background-color: tomato;
+    background-color: $colors-bg;
 }
