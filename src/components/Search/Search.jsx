@@ -1,7 +1,8 @@
 import { IoSearch } from "react-icons/io5";
 import style from "./Search.module.scss";
+import { useState } from "react";
 
-const Search = (search, setSearch) => {
+const Search = ({ search, setSearch }) => {
   return (
     <div className={style.container}>
       Search
@@ -9,7 +10,7 @@ const Search = (search, setSearch) => {
       <input
         type="text"
         onChange={(e) => {
-          e.target.value;
+          setSearch(() => e.target.value);
         }}
         value={search}
       />
