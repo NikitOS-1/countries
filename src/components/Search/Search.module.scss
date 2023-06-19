@@ -1,0 +1,25 @@
+@import '../../containers/App/vars';
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: $radii;
+    box-shadow: $shadow-dark;
+    width: 280px;
+    -webkit-box-align: center;
+    padding: 1rem 2rem;
+    background-color: $colors-ui-base-light;
+    box-shadow: $shadow-light;
+
+    input {
+        margin-left: 10px;
+        border: none;
+
+        &:focus-visible {
+            outline: 0;
+            outline-offset: 0;
+
+        }
+    }
+}
