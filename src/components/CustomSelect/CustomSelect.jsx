@@ -5,11 +5,9 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 
-export default function BasicSelect() {
-  const [country, setCountry] = React.useState("");
-  console.log(country);
+export default function BasicSelect({ region, setRegion }) {
   const handleChange = (event) => {
-    setCountry(event.target.value);
+    setRegion(event.target.value);
   };
 
   return (
@@ -29,7 +27,7 @@ export default function BasicSelect() {
         <Select
           labelId="filter"
           id="select-filter"
-          value={country}
+          value={region}
           label="Filter by Region"
           onChange={handleChange}
           sx={{

@@ -5,10 +5,16 @@ import style from "./Controls.module.scss";
 
 const Controls = () => {
   const [search, setSearch] = useState("");
+  const [region, setRegion] = useState("");
+
   return (
     <div className={style.container}>
       <Search search={search} setSearch={setSearch} className={style.search} />
-      <CustomSelect className={style.select} />
+      <CustomSelect
+        className={style.select}
+        region={region}
+        setRegion={setRegion}
+      />
     </div>
   );
 };
