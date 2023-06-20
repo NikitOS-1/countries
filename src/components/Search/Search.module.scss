@@ -9,12 +9,14 @@
     width: 280px;
     -webkit-box-align: center;
     padding: 1rem 2rem;
-    background-color: $colors-ui-base-light;
+    background-color: inherit;
     box-shadow: $shadow-light;
 
     input {
         margin-left: 10px;
         border: none;
+        background-color: inherit;
+        color: inherit;
 
         &:focus-visible {
             outline: 0;
@@ -24,8 +26,9 @@
     }
 }
 
-@media (max-width:754px) {
+@media (max-width:753px) {
     .container {
         width: 100%;
+        margin: 0px 0px 30px 0px;
     }
 }
