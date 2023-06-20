@@ -4,32 +4,49 @@ import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
+import style from "./CustomSelect.module.scss";
 
 export default function BasicSelect() {
-  const [age, setAge] = React.useState("");
+  const [country, setCountry] = React.useState("");
 
   const handleChange = (event) => {
-    setAge(event.target.value);
+    setCountry(event.target.value);
   };
 
   return (
     <Box sx={{ width: 220 }}>
       <FormControl fullWidth>
-        <InputLabel id="filter">Filter by Region</InputLabel>
+        <InputLabel id="filter" className={style.filterLabel}>
+          Filter by Region
+        </InputLabel>
         <Select
           labelId="filter"
           id="select-filter"
-          value={age}
+          value={country}
           label="Filter by Region"
-          onChange={handleChange}>
-          <MenuItem value={10} style={{ backgroundColor: "tomato" }}>
+          onChange={handleChange}
+          className={style.filterSelect}>
+          <MenuItem
+            value={10}
+            style={{ backgroundColor: "tomato" }}
+            className={style.filterSelect}>
             None
           </MenuItem>
-          <MenuItem value={20}>Africa</MenuItem>
-          <MenuItem value={30}>America</MenuItem>
-          <MenuItem value={40}>Asia</MenuItem>
-          <MenuItem value={50}>Europe</MenuItem>
-          <MenuItem value={60}>Oceania</MenuItem>
+          <MenuItem value={20} className={style.filterSelect}>
+            Africa
+          </MenuItem>
+          <MenuItem value={30} className={style.filterSelect}>
+            America
+          </MenuItem>
+          <MenuItem value={40} className={style.filterSelect}>
+            Asia
+          </MenuItem>
+          <MenuItem value={50} className={style.filterSelect}>
+            Europe
+          </MenuItem>
+          <MenuItem value={60} className={style.filterSelect}>
+            Oceania
+          </MenuItem>
         </Select>
       </FormControl>
     </Box>
