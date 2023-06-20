@@ -4,19 +4,25 @@ import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
-import style from "./CustomSelect.module.scss";
 
 export default function BasicSelect() {
   const [country, setCountry] = React.useState("");
-
+  console.log(country);
   const handleChange = (event) => {
     setCountry(event.target.value);
   };
 
   return (
-    <Box sx={{ width: 220 }}>
+    <Box
+      sx={{
+        width: 220,
+        color: "inherit",
+        fontFamily: "inherit",
+      }}>
       <FormControl fullWidth>
-        <InputLabel id="filter" className={style.filterLabel}>
+        <InputLabel
+          id="filter"
+          sx={{ color: "inherit", fontFamily: "inherit" }}>
           Filter by Region
         </InputLabel>
         <Select
@@ -25,28 +31,18 @@ export default function BasicSelect() {
           value={country}
           label="Filter by Region"
           onChange={handleChange}
-          className={style.filterSelect}>
-          <MenuItem
-            value={10}
-            style={{ backgroundColor: "tomato" }}
-            className={style.filterSelect}>
+          sx={{
+            color: "inherit",
+            fontFamily: "inherit",
+          }}>
+          <MenuItem value={"None"} style={{ backgroundColor: "tomato" }}>
             None
           </MenuItem>
-          <MenuItem value={20} className={style.filterSelect}>
-            Africa
-          </MenuItem>
-          <MenuItem value={30} className={style.filterSelect}>
-            America
-          </MenuItem>
-          <MenuItem value={40} className={style.filterSelect}>
-            Asia
-          </MenuItem>
-          <MenuItem value={50} className={style.filterSelect}>
-            Europe
-          </MenuItem>
-          <MenuItem value={60} className={style.filterSelect}>
-            Oceania
-          </MenuItem>
+          <MenuItem value={"Africa"}>Africa</MenuItem>
+          <MenuItem value={"America"}>America</MenuItem>
+          <MenuItem value={"Asia"}>Asia</MenuItem>
+          <MenuItem value={"Europe"}>Europe</MenuItem>
+          <MenuItem value={"Oceania"}>Oceania</MenuItem>
         </Select>
       </FormControl>
     </Box>
