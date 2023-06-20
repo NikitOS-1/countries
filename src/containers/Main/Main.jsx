@@ -7,7 +7,7 @@ const Main = () => {
   return (
     <main className={style.wrap}>
       <Controls />
-      <div className={style.cards}>
+      <section className={style.cards}>
         <Card />
         <Card />
         <Card />
@@ -15,7 +15,7 @@ const Main = () => {
         <Card />
         <Card />
         <Card />
-      </div>
+      </section>
     </main>
   );
 };
