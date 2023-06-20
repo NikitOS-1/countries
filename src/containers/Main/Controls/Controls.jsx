@@ -7,8 +7,8 @@ const Controls = () => {
   const [search, setSearch] = useState("");
   return (
     <div className={style.container}>
-      <Search search={search} setSearch={setSearch} />
-      <CustomSelect />
+      <Search search={search} setSearch={setSearch} className={style.search} />
+      <CustomSelect className={style.select} />
     </div>
   );
 };

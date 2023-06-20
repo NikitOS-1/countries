@@ -13,7 +13,7 @@ export default function BasicSelect() {
   };
 
   return (
-    <Box sx={{ minWidth: 220 }}>
+    <Box sx={{ width: 220 }}>
       <FormControl fullWidth>
         <InputLabel id="filter">Filter by Region</InputLabel>
         <Select
