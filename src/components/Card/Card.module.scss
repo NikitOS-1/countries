@@ -1,0 +1,30 @@
+.wrap {
+    width: 24%;
+    height: 300px;
+    background-color: tomato;
+    margin: 1rem;
+}
+
+@media (max-width:753px) {
+    .wrap {
+        width: 100%;
+    }
+}
+
+@media (min-width:754px) {
+    .wrap {
+        width: 45%;
+    }
+}
+
+@media (min-width:1122px) {
+    .wrap {
+        width: 30%;
+    }
+}
+
+@media (min-width:1422px) {
+    .wrap {
+        width: 22%;
+    }
+}
