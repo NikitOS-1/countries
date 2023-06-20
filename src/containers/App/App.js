@@ -6,7 +6,6 @@ import style from "./App.module.scss";
 
 function App() {
   const [theme, setTheme] = useState("light");
-  console.log(theme);
 
   const toggleTheme = () => {
     setTheme(theme === "light" ? "dark" : "light");
