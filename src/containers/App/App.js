@@ -3,8 +3,15 @@ import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 import Main from "../Main/Main";
 import style from "./App.module.scss";
-
+import axios from "axios";
+import { ALL_COUNTRIES } from "../../config";
 function App() {
+  const [countries, setCountries] = useState([]);
+
+  useEffect(() => {
+    axios.get(ALL_COUNTRIES).then(({ data }) => setCountries(data));
+  }, []);
+
   const [theme, setTheme] = useState("light");
 
   const toggleTheme = () => {
@@ -14,7 +21,7 @@ function App() {
   return (
     <div className={[style["container"], style[`${theme}`]].join(" ")}>
       <Header toggleTheme={toggleTheme} />
-      <Main />
+      <Main countries={countries} />
       <Footer />
     </div>
   );
