@@ -7,17 +7,30 @@ import style from "./HomePage.module.scss";
 import { useNavigate } from "react-router-dom";
 
 const HomePage = ({ countries, setCountries }) => {
+  const [filteredCountries, setFilteredCountries] = useState([countries]);
   const navigate = useNavigate();
+  console.log(filteredCountries);
+  const handleSearch = (search, region) => {
+    let data = [...countries];
+
+    if (region) {
+      data = data.filter((c) => c.region.includes(region));
+    }
+    if (search) {
+      data = data.filter((c) => c.name.includes(search));
+    }
+    setFilteredCountries(data);
+  };
 
   useEffect(() => {
-    if (!countries.length) {
+    if (countries.length) {
       axios.get(ALL_COUNTRIES).then(({ data }) => setCountries(data));
     }
   }, []);
 
   return (
     <div className={style.wrap}>
-      <Controls />
+      <Controls handleSearch={handleSearch} />
       <section className={style.cards}>
         {countries.map((c) => {
           const countryInfo = {
