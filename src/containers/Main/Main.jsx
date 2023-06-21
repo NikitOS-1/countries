@@ -14,15 +14,15 @@ const Main = ({ countries = [] }) => {
             name: c.name.common,
             info: [
               {
-                title: "Population",
+                title: "Population:",
                 description: c.population.toLocaleString(),
               },
               {
-                title: "Region",
+                title: "Region:",
                 description: c.region,
               },
               {
-                title: "Capital",
+                title: "Capital:",
                 description: c.capital,
               },
             ],
