@@ -6,8 +6,7 @@ import Card from "../../components/Card/Card";
 import style from "./HomePage.module.scss";
 import { useNavigate } from "react-router-dom";
 
-const HomePage = () => {
-  const [countries, setCountries] = useState([]);
+const HomePage = ({ countries, setCountries }) => {
   const navigate = useNavigate();
 
   useEffect(() => {

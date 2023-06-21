@@ -5,6 +5,7 @@ import Main from "../Main/Main";
 import style from "./App.module.scss";
 
 function App() {
+  const [countries, setCountries] = useState([]);
   const [theme, setTheme] = useState("light");
 
   const toggleTheme = () => {
@@ -14,7 +15,7 @@ function App() {
   return (
     <div className={[style["container"], style[`${theme}`]].join(" ")}>
       <Header toggleTheme={toggleTheme} />
-      <Main />
+      <Main countries={countries} setCountries={setCountries} />
       <Footer />
     </div>
   );
