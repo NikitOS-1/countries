@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { ALL_COUNTRIES } from "../../config";
 import Controls from "../../containers/Main/Controls/Controls";
-import { Card } from "@mui/material";
+import Card from "../../components/Card/Card";
 import style from "./HomePage.module.scss";
 
 const HomePage = () => {
@@ -38,6 +38,7 @@ const HomePage = () => {
 
           return (
             <Card
+              key={countryInfo.name}
               img={countryInfo.img}
               name={countryInfo.name}
               info={countryInfo.info}
