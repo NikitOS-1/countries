@@ -7,6 +7,7 @@
     cursor: pointer;
     border-radius: $radii;
     box-shadow: $shadow-light;
+    overflow: hidden;
 
     .cardImg {
         img {
