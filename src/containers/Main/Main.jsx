@@ -9,7 +9,32 @@ const Main = ({ countries = [] }) => {
       <Controls />
       <section className={style.cards}>
         {countries.map((c) => {
-          <Card key={c.name} img={c.flags.png} name={c.name} />;
+          const countryInfo = {
+            img: c.flags.png,
+            name: c.name.common,
+            info: [
+              {
+                title: "Population",
+                description: c.population.toLocaleString(),
+              },
+              {
+                title: "Region",
+                description: c.region,
+              },
+              {
+                title: "Capital",
+                description: c.capital,
+              },
+            ],
+          };
+
+          return (
+            <Card
+              img={countryInfo.img}
+              name={countryInfo.name}
+              info={countryInfo.info}
+            />
+          );
         })}
       </section>
     </main>
