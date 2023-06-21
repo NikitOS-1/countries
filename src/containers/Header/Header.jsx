@@ -6,7 +6,9 @@ const Header = ({ toggleTheme }) => {
   return (
     <header>
       <div className={style.wrap}>
-        <a href="">Where is the world?</a>
+        <div className={style.logo}>
+          <Link to={"/"}>Where is the world?</Link>
+        </div>
         <div onClick={toggleTheme} className={style.modeTheme}>
           <IoMoon />
           <span>Light Mode </span>

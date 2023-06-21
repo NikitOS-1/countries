@@ -4,10 +4,15 @@ import { ALL_COUNTRIES } from "../../config";
 import Controls from "../../containers/Main/Controls/Controls";
 import Card from "../../components/Card/Card";
 import style from "./HomePage.module.scss";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const HomePage = () => {
   const [countries, setCountries] = useState([]);
+  const location = useLocation();
+  const navigate = useNavigate();
 
+  // const path = location.pathname;
+  // console.log(location.pathname);
   useEffect(() => {
     axios.get(ALL_COUNTRIES).then(({ data }) => setCountries(data));
   }, []);
@@ -42,6 +47,7 @@ const HomePage = () => {
               img={countryInfo.img}
               name={countryInfo.name}
               info={countryInfo.info}
+              onClick={() => navigate(`/country/${c.countryInfo.name}`)}
             />
           );
         })}
