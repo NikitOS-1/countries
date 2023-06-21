@@ -10,7 +10,7 @@ const HomePage = ({ countries, setCountries }) => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (!countries.lenght) {
+    if (!countries.length) {
       axios.get(ALL_COUNTRIES).then(({ data }) => setCountries(data));
     }
   }, []);
