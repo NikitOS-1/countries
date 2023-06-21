@@ -7,15 +7,7 @@ const Main = () => {
   return (
     <main className={style.wrap}>
       <Controls />
-      <section className={style.cards}>
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-      </section>
+      <section className={style.cards}></section>
     </main>
   );
 };
