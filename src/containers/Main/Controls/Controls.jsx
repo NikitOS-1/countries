@@ -8,10 +8,9 @@ const Controls = ({ handleSearch }) => {
   const [region, setRegion] = useState("");
 
   useEffect(() => {
-    console.log(search);
-    console.log(region);
     handleSearch(search, region);
   }, [search, region]);
+
   return (
     <div className={style.container}>
       <Search search={search} setSearch={setSearch} className={style.search} />
