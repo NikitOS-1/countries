@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 const HomePage = ({ countries, setCountries }) => {
   const [filteredCountries, setFilteredCountries] = useState(countries);
   const navigate = useNavigate();
-  // console.log(countries);
+
   const handleSearch = (search, region) => {
     let data = [...countries];
 
