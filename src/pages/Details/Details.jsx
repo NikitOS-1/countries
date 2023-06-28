@@ -11,7 +11,6 @@ const Details = () => {
   const { name } = useParams();
   const path = location.pathname;
   const [country, setCountry] = useState(null);
-  console.log(country);
 
   useEffect(() => {
     axios.get(searchByCountry(name)).then(({ data }) => setCountry(data[0]));
@@ -21,7 +20,7 @@ const Details = () => {
     <>
       <div>
         <Navigation />
-        <Info name={name} />
+        <Info country={country} />
       </div>
     </>
   );
