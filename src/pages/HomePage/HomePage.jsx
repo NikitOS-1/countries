@@ -16,14 +16,14 @@ const HomePage = ({ countries, setCountries }) => {
 
   const handleSearch = (search, region) => {
     let data = [...countries];
-    console.log(region);
     if (region) {
       data = data.filter((c) => c.region.includes(region));
     }
     if (search) {
-      // data = data.filter((c) => c.name.includes(search));
+      data = data.filter((c) =>
+        c.name.common.toLowerCase().includes(search.toLowerCase())
+      );
     }
-
     setFilteredCountries(data);
   };
 
