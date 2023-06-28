@@ -34,7 +34,7 @@ export default function BasicSelect({ region, setRegion }) {
             color: "inherit",
             fontFamily: "inherit",
           }}>
-          <MenuItem value={"None"} style={{ backgroundColor: "tomato" }}>
+          <MenuItem value={""} style={{ backgroundColor: "tomato" }}>
             None
           </MenuItem>
           <MenuItem value={"Africa"}>Africa</MenuItem>
