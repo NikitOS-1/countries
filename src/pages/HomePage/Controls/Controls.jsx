@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import Search from "../../../components/Search/Search";
 import CustomSelect from "../../../components/CustomSelect/CustomSelect";
+import Search from "../../../components/Search/Search";
 import style from "./Controls.module.scss";
 
 const Controls = ({ handleSearch }) => {

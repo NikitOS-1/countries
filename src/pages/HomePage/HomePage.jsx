@@ -1,27 +1,32 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { ALL_COUNTRIES } from "../../config";
-import Controls from "../../containers/Main/Controls/Controls";
 import Card from "../../components/Card/Card";
 import style from "./HomePage.module.scss";
 import { useNavigate } from "react-router-dom";
+import Controls from "./Controls/Controls";
 
 const HomePage = ({ countries, setCountries }) => {
-  const [filteredCountries, setFilteredCountries] = useState(countries);
+  const [filteredCountries, setFilteredCountries] = useState([]);
+  useEffect(() => {
+    setFilteredCountries(countries);
+  }, [countries]);
+
   const navigate = useNavigate();
 
   const handleSearch = (search, region) => {
     let data = [...countries];
-
+    console.log(region);
     if (region) {
       data = data.filter((c) => c.region.includes(region));
     }
     if (search) {
-      data = data.filter((c) => c.name.includes(search));
+      // data = data.filter((c) => c.name.includes(search));
     }
+
     setFilteredCountries(data);
   };
-  const news = countries;
+
   useEffect(() => {
     if (!countries.length) {
       axios.get(ALL_COUNTRIES).then(({ data }) => setCountries(data));
@@ -51,7 +56,6 @@ const HomePage = ({ countries, setCountries }) => {
               },
             ],
           };
-
           return (
             <Card
               key={countryInfo.name}
