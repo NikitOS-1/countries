@@ -1,0 +1,14 @@
+button {
+    padding: 0 1 rem;
+    background-color: inherit;
+    box-shadow: $shadow-light;
+    line-height: 2.5;
+    border-radius: $radii;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: inherit;
+    cursor: pointer;
+    margin: 30px;
+}
