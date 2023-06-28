@@ -3,6 +3,7 @@ import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { searchByCountry } from "../../config";
 import Navigation from "./Navigation/Navigation";
+import Info from "./Info/Info";
 
 const Details = () => {
   const location = useLocation();
@@ -20,7 +21,7 @@ const Details = () => {
     <>
       <div>
         <Navigation />
-        <div>{name}</div>
+        <Info name={name} />
       </div>
     </>
   );
