@@ -1,8 +1,8 @@
 import axios from "axios";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
-import { IoArrowBack } from "react-icons/io5";
 import { useEffect, useState } from "react";
 import { searchByCountry } from "../../config";
+import Navigation from "./Navigation/Navigation";
 
 const Details = () => {
   const location = useLocation();
@@ -19,12 +19,7 @@ const Details = () => {
   return (
     <>
       <div>
-        <nav>
-          <button onClick={() => navigate(-1)}>
-            <IoArrowBack />
-            Back
-          </button>
-        </nav>
+        <Navigation />
         <div>{name}</div>
       </div>
     </>
