@@ -8,8 +8,7 @@ import { ALL_COUNTRIES } from "../../config";
 
 function App() {
   const [countries, setCountries] = useState([]);
-
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState("dark");
 
   const toggleTheme = () => {
     setTheme(theme === "light" ? "dark" : "light");

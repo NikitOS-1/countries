@@ -1,6 +1,7 @@
 @import '../../containers/App/vars';
 
 .wrap {
+    min-width: 316px;
     width: 24%;
     height: 400px;
     margin: 1.1rem;
@@ -46,7 +47,7 @@
 
 @media (max-width:753px) {
     .wrap {
-        width: 100%;
+        width: 80%;
     }
 }
 
