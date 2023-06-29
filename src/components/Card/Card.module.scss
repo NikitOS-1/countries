@@ -10,6 +10,10 @@
     box-shadow: $shadow-light;
     overflow: hidden;
 
+    &:hover {
+        opacity: 0.8;
+    }
+
     .cardImg {
         img {
             width: 100%;
