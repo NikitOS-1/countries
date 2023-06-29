@@ -39,7 +39,7 @@ const HomePage = ({ countries, setCountries }) => {
       <section className={style.cards}>
         {filteredCountries.map((c) => {
           const countryInfo = {
-            img: c.flags.png,
+            img: c.flags.svg,
             name: c.name.common,
             info: [
               {
