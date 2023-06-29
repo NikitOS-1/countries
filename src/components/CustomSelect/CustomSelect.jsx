@@ -4,7 +4,7 @@ import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
-
+import style from "./select.module.scss";
 export default function BasicSelect({ region, setRegion }) {
   const handleChange = (event) => {
     setRegion(event.target.value);
@@ -19,7 +19,7 @@ export default function BasicSelect({ region, setRegion }) {
         boxShadow: "rgba(149, 157, 165, 0.2) 0px 8px 24px",
         border: "none",
       }}>
-      <FormControl fullWidth>
+      <FormControl fullWidth className={style.wrap}>
         <InputLabel
           id="filter"
           sx={{ color: "inherit", fontFamily: "inherit" }}>
