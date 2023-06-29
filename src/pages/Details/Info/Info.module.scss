@@ -68,3 +68,59 @@ section {
         }
     }
 }
+
+@media screen and (max-width: 1240px) and (min-width: 980px) {
+    section {
+        .infoDetail {
+            padding: 0 2rem;
+
+            .wrap {
+                display: flex;
+                align-items: flex-start;
+                flex-wrap: nowrap;
+                flex-direction: column;
+
+                .list1 {
+                    width: 100%;
+                }
+
+                .list2 {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 980px) and (min-width: 320px) {
+    section {
+        flex-direction: column;
+
+        .picture {
+            img {
+                width: 80%;
+                height: auto;
+            }
+        }
+
+        .infoDetail {
+            width: 100%;
+            padding: 2rem 0;
+
+            .wrap {
+                display: flex;
+                align-items: flex-start;
+                flex-wrap: nowrap;
+                flex-direction: column;
+
+                .list1 {
+                    width: 100%;
+                }
+
+                .list2 {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
