@@ -18,7 +18,7 @@ const Details = () => {
 
   return (
     <>
-      <div>
+      <div style={{ padding: "2rem" }}>
         <Navigation />
         {country && <Info {...country} />}
       </div>

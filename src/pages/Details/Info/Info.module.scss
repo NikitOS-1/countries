@@ -3,6 +3,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    max-width: 1440px;
 
     .picture {
         img {
@@ -12,17 +13,57 @@ section {
     }
 
     .infoDetail {
-        h1 {}
+        padding: 0 4rem;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-direction: column;
 
-        .list1 {
-            li {
-                b {}
-            }
+        h1 {
+            font-size: 2.3em;
+            font-weight: 700;
+            margin: 0px 0px 20px 0px;
         }
 
-        .list2 {
-            li {
-                b {}
+        .wrap {
+            display: flex;
+            align-items: flex-start;
+            flex-wrap: wrap;
+
+            .list1 {
+                width: 55%;
+
+                li {
+                    margin: 15px 0px;
+
+                    b {
+                        font-weight: 700;
+                        margin-right: 5px;
+                    }
+                }
+            }
+
+            .list2 {
+                width: 45%;
+
+                li {
+                    margin: 15px 0px;
+
+                    b {
+                        font-weight: 700;
+                        margin-right: 5px;
+                    }
+                }
+            }
+
+            .borderC {
+                margin-top: 50px;
+                width: 100%;
+
+                b {
+                    font-weight: 700;
+                    margin-right: 5px;
+                }
             }
         }
     }

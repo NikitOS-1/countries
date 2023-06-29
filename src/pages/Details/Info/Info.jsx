@@ -78,7 +78,7 @@ const Info = (props) => {
               )}
             </li>
           </ul>
-          <ul>
+          <ul className={style.borderC}>
             <li>
               <b>Border Countries: </b>
               <span>There is no border country</span>
