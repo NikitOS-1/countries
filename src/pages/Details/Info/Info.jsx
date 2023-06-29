@@ -4,12 +4,12 @@ import style from "./Info.module.scss";
 const Info = (props) => {
   const {
     name,
-    nativeName = "None",
+    nativeName = name,
     flags,
-    capital = "None",
+    capital = "There is no capital",
     population,
     region,
-    subregion = "None",
+    subregion = "Dont have subregion",
     tld,
     currencies,
     languages,
@@ -52,17 +52,29 @@ const Info = (props) => {
         <ul className={style.list2}>
           <li>
             <b>Top Level Domain: </b>
-            {"None" && tld.map((d) => <span key={d}>{d} </span>)}
+            {tld ? (
+              tld.map((d) => <span key={d}>{d} </span>)
+            ) : (
+              <span>There is no domain</span>
+            )}
           </li>
           <li>
             <b>Currency: </b>
-            <span>{"None" && currencyValue}</span>
+            <span>
+              {currencyValue ? (
+                currencyValue
+              ) : (
+                <span>There is no currency</span>
+              )}
+            </span>
           </li>
           <li>
             <b>Language: </b>
-            {languageValue.map((l) => (
-              <span key={l}>{l} </span>
-            ))}
+            {languageValue ? (
+              languageValue.map((l) => <span key={l}>{l} </span>)
+            ) : (
+              <span>There is no languages</span>
+            )}
           </li>
         </ul>
       </div>
