@@ -21,64 +21,72 @@ const Info = (props) => {
   let languageValue = languages ? Object.values(languages) : languages;
 
   return (
-    <div className={style.wrapper}>
+    <section>
       <div className={style.picture}>
         <img src={flags.svg} alt={name} />
       </div>
       <div className={style.infoDetail}>
         <h1>{name.common}</h1>
-        <ul className={style.list1}>
-          <li>
-            <b>Native Name: </b>
-            {name.official}
-          </li>
-          <li>
-            <b>Population: </b>
-            {population}
-          </li>
-          <li>
-            <b>Region: </b>
-            {region}
-          </li>
-          <li>
-            <b>Sub Region: </b>
-            {subregion}
-          </li>
-          <li>
-            <b>Capital: </b>
-            {capital}
-          </li>
-        </ul>
-        <ul className={style.list2}>
-          <li>
-            <b>Top Level Domain: </b>
-            {tld ? (
-              tld.map((d) => <span key={d}>{d} </span>)
-            ) : (
-              <span>There is no domain</span>
-            )}
-          </li>
-          <li>
-            <b>Currency: </b>
-            <span>
-              {currencyValue ? (
-                currencyValue
+        <div className={style.wrap}>
+          <ul className={style.list1}>
+            <li>
+              <b>Native Name: </b>
+              {name.official}
+            </li>
+            <li>
+              <b>Population: </b>
+              {population}
+            </li>
+            <li>
+              <b>Region: </b>
+              {region}
+            </li>
+            <li>
+              <b>Sub Region: </b>
+              {subregion}
+            </li>
+            <li>
+              <b>Capital: </b>
+              {capital}
+            </li>
+          </ul>
+          <ul className={style.list2}>
+            <li>
+              <b>Top Level Domain: </b>
+              {tld ? (
+                tld.map((d) => <span key={d}>{d} </span>)
               ) : (
-                <span>There is no currency</span>
+                <span>There is no domain</span>
               )}
-            </span>
-          </li>
-          <li>
-            <b>Language: </b>
-            {languageValue ? (
-              languageValue.map((l) => <span key={l}>{l} </span>)
-            ) : (
-              <span>There is no languages</span>
-            )}
-          </li>
-        </ul>
+            </li>
+            <li>
+              <b>Currency: </b>
+              <span>
+                {currencyValue ? (
+                  currencyValue
+                ) : (
+                  <span>There is no currency</span>
+                )}
+              </span>
+            </li>
+            <li>
+              <b>Language: </b>
+              {languageValue ? (
+                languageValue.map((l) => <span key={l}>{l} </span>)
+              ) : (
+                <span>There is no languages</span>
+              )}
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <b>Border Countries: </b>
+              <span>There is no border country</span>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 export default Info;

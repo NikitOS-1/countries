@@ -11,8 +11,9 @@ header {
     .wrap {
         display: flex;
         justify-content: space-between;
-        width: $md-display-size;
+        width: 1440px;
         padding: 2rem;
+
 
         .logo {
             &:hover {
@@ -26,6 +27,7 @@ header {
             align-items: center;
             justify-content: center;
             cursor: pointer;
+
             &:hover {
                 opacity: 0.7;
                 transition: 0.2s;
