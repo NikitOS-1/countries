@@ -14,10 +14,22 @@ header {
         width: $md-display-size;
         padding: 2rem;
 
+        .logo {
+            &:hover {
+                opacity: 0.7;
+                transition: 0.2s;
+            }
+        }
+
         .modeTheme {
             display: flex;
             align-items: center;
             justify-content: center;
+            cursor: pointer;
+            &:hover {
+                opacity: 0.7;
+                transition: 0.2s;
+            }
 
             span {
                 margin-left: 5px;
