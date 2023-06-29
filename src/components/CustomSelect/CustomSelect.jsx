@@ -40,6 +40,7 @@ export default function BasicSelect({ region, setRegion }) {
           <MenuItem value={"Africa"}>Africa</MenuItem>
           <MenuItem value={"America"}>America</MenuItem>
           <MenuItem value={"Asia"}>Asia</MenuItem>
+          <MenuItem value={"Antarctic"}>Antarctic</MenuItem>
           <MenuItem value={"Europe"}>Europe</MenuItem>
           <MenuItem value={"Oceania"}>Oceania</MenuItem>
         </Select>

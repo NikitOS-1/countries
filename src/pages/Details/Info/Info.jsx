@@ -4,19 +4,21 @@ import style from "./Info.module.scss";
 const Info = (props) => {
   const {
     name,
-    nativeName,
+    nativeName = "None",
     flags,
-    capital,
+    capital = "None",
     population,
     region,
-    subregion,
-    tld = [],
-    currencies = [],
-    languages = [],
-    borders = [],
+    subregion = "None",
+    tld,
+    currencies,
+    languages,
+    borders,
   } = props;
-  let currencyValue = Object.values(props.currencies).map((i) => i.name);
-  let languageValue = Object.values(languages);
+  let currencyValue = currencies
+    ? Object.values(props.currencies).map((i) => i.name)
+    : currencies;
+  let languageValue = languages ? Object.values(languages) : languages;
 
   return (
     <div className={style.wrapper}>
@@ -50,13 +52,11 @@ const Info = (props) => {
         <ul className={style.list2}>
           <li>
             <b>Top Level Domain: </b>
-            {tld.map((d) => (
-              <span key={d}>{d} </span>
-            ))}
+            {"None" && tld.map((d) => <span key={d}>{d} </span>)}
           </li>
           <li>
             <b>Currency: </b>
-            <span>{currencyValue}</span>
+            <span>{"None" && currencyValue}</span>
           </li>
           <li>
             <b>Language: </b>

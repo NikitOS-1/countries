@@ -8,6 +8,7 @@ import Controls from "./Controls/Controls";
 
 const HomePage = ({ countries, setCountries }) => {
   const [filteredCountries, setFilteredCountries] = useState([]);
+
   useEffect(() => {
     setFilteredCountries(countries);
   }, [countries]);
