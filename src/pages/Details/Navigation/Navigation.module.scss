@@ -1,0 +1,28 @@
+@import '../../../containers/App/vars';
+
+nav {
+    margin: 60px 0px 40px 0px;
+
+    button {
+        font: inherit;
+        font-weight: 600;
+        font-size: small;
+        padding: 0px 1rem;
+        background-color: $colors-ui-base-light;
+        box-shadow: $shadow-light;
+        line-height: 2.5;
+        border-radius: $radii;
+        border: none;
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        gap: 0.75rem;
+        color: black;
+        cursor: pointer;
+
+        &:hover {
+            transition: 0.3s;
+            opacity: 0.8;
+        }
+    }
+}
