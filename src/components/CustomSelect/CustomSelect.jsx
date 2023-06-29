@@ -17,6 +17,7 @@ export default function BasicSelect({ region, setRegion }) {
         color: "inherit",
         fontFamily: "inherit",
         boxShadow: "rgba(149, 157, 165, 0.2) 0px 8px 24px",
+        border: "none",
       }}>
       <FormControl fullWidth>
         <InputLabel
