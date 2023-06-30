@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import style from "./Info.module.scss";
 import axios from "axios";
 import { filterByCode } from "../../../config";
+import { useNavigate } from "react-router-dom";
 const Info = (props) => {
   const {
     name,
@@ -16,18 +17,24 @@ const Info = (props) => {
     languages,
     borders = [],
   } = props;
+
   const [neighbors, setNeighbors] = useState([]);
+
   useEffect(() => {
-    axios
-      .get(filterByCode(borders))
-      .then((data) => setNeighbors(data.data.map((c) => c.name)));
+    if (borders.length) {
+      axios
+        .get(filterByCode(borders))
+        .then((data) => setNeighbors(data.data.map((c) => c.name)));
+    }
   }, [borders]);
 
   let currencyValue = currencies
     ? Object.values(props.currencies).map((i) => i.name)
     : currencies;
   let languageValue = languages ? Object.values(languages) : languages;
+  const navigate = useNavigate();
 
+  console.log(neighbors);
   return (
     <section>
       <div className={style.picture}>
@@ -89,10 +96,18 @@ const Info = (props) => {
           <ul className={style.borderC}>
             <b>Border Countries: </b>
             <li>
-              {/* <span>There is no border country</span>&& */}
-              {neighbors.map((c) => (
-                <span className={style.borders}>{c.common}</span>
-              ))}
+              {borders.length ? (
+                neighbors.map((c) => (
+                  <span
+                    key={c.common}
+                    className={style.borders}
+                    onClick={() => navigate(`/country/${c.official}`)}>
+                    {c.common}
+                  </span>
+                ))
+              ) : (
+                <span>There is no border country</span>
+              )}
             </li>
           </ul>
         </div>
