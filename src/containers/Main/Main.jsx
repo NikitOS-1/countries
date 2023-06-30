@@ -1,6 +1,5 @@
 import HomePage from "../../pages/HomePage/HomePage";
 import Details from "../../pages/Details/Details";
-import NotFound from "../../pages/NotFound/NotFound";
 import style from "./Main.module.scss";
 import { Route, Routes } from "react-router-dom";
 
@@ -15,7 +14,6 @@ const Main = ({ countries, setCountries }) => {
           }
         />
         <Route path="/country/:name" element={<Details />} />
-        <Route path="/error" element={<NotFound />} />
       </Routes>
     </main>
   );
