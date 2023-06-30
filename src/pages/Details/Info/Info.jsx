@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import style from "./Info.module.scss";
-
+import axios from "axios";
+import { filterByCode } from "../../../config";
 const Info = (props) => {
   const {
     name,
@@ -13,8 +14,15 @@ const Info = (props) => {
     tld,
     currencies,
     languages,
-    borders,
+    borders = [],
   } = props;
+  const [neighbors, setNeighbors] = useState([]);
+  useEffect(() => {
+    axios
+      .get(filterByCode(borders))
+      .then((data) => setNeighbors(data.data.map((c) => c.name)));
+  }, [borders]);
+
   let currencyValue = currencies
     ? Object.values(props.currencies).map((i) => i.name)
     : currencies;
@@ -79,9 +87,12 @@ const Info = (props) => {
             </li>
           </ul>
           <ul className={style.borderC}>
+            <b>Border Countries: </b>
             <li>
-              <b>Border Countries: </b>
-              <span>There is no border country</span>
+              {/* <span>There is no border country</span>&& */}
+              {neighbors.map((c) => (
+                <span className={style.borders}>{c.common}</span>
+              ))}
             </li>
           </ul>
         </div>

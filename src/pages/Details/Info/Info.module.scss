@@ -4,6 +4,7 @@ section {
     align-items: center;
     justify-content: space-between;
     max-width: 1440px;
+    color: inherit;
 
     .picture {
         img {
@@ -63,6 +64,27 @@ section {
                 b {
                     font-weight: 700;
                     margin-right: 5px;
+                }
+
+                li {
+                    margin-top: 10px;
+                    display: flex;
+                    flex-wrap: wrap;
+
+                    .borders {
+                        margin: 5px;
+                        padding: 0px 1rem;
+                        // background-color: #202c37;
+                        background-color: inherit;
+                        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+                        line-height: 1.5;
+                        cursor: pointer;
+                        border-radius: 5px;
+
+                        &:hover {
+                            opacity: 0.8;
+                        }
+                    }
                 }
             }
         }
