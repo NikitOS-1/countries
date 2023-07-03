@@ -12,7 +12,6 @@ const Card = ({ img, name, info = [], onClick }) => {
           {info.map((el) => (
             <li key={el.title}>
               <span>{el.title}</span>
-              <span>{el.title}</span>
               {el.description}
             </li>
           ))}
